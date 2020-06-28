@@ -54,3 +54,16 @@ $theme-orange-light:#FFD6BA;
 .text-green-dark {
   color: $theme-green-dark;
 }
+
+// Forms theme
+.custom-form {
+  input {
+    border: none;
+    border-bottom: 2px solid $theme-green-dark;
+  }
+}
+
+.bg-deco {
+  background-color:$theme-green-hiperlight;
+  height: 120px;
+}

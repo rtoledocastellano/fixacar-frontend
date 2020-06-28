@@ -42,3 +42,13 @@
 .text-green-dark {
   color: #89B0AE;
 }
+
+.custom-form input {
+  border: none;
+  border-bottom: 2px solid #89B0AE;
+}
+
+.bg-deco {
+  background-color: rgba(137, 176, 174, 0.13);
+  height: 120px;
+}
