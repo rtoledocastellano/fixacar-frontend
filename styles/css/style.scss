@@ -1,44 +1,26 @@
-$theme-green-dark: #89B0AE;
-$theme-green-light: #BEE3DB;
-$theme-green-hiperlight: rgba(137, 176, 174, 0.13);
-$theme-gray-dark:#555B6E;
-$theme-gray-light: #C4C4C4;
-$theme-gray-light-bg:#E5E5E5;
-$theme-orange-light:#FFD6BA;
-
-.nav-color-theme {
-  background-color: $theme-green-dark;
-}
-
-.container-fluid {
-  margin-bottom: 25vh;
-}
+@import 'base';
 
 .intro-form {
   background-color: $theme-green-light;
   padding: 30px 10px;
   width: 90vw;
   border-radius: 10px;
+  margin-top: 25vh;
 }
 
-.btn-theme-primary{
-  background-color:$theme-gray-dark;
-  border: $theme-gray-dark;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
+button {
+  i {
+    font-size:30px;
+  }
 }
 
-button > i {
-  font-size:30px;
+a {
+  i {
+    font-size:18px;
+  }
 }
 
-a > i {
-  font-size:18px;
-}
 
-.btn-bg-white{
+.btn-bg-white {
   background-color: white;
 }
-
-

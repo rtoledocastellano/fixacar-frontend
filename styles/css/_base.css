@@ -30,23 +30,3 @@
   background-color: #FFD6BA;
   color: black;
 }
-
-.intro-form {
-  background-color: #BEE3DB;
-  padding: 30px 10px;
-  width: 90vw;
-  border-radius: 10px;
-  margin-top: 25vh;
-}
-
-button i {
-  font-size: 30px;
-}
-
-a i {
-  font-size: 18px;
-}
-
-.btn-bg-white {
-  background-color: white;
-}

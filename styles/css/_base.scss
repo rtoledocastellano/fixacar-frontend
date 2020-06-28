@@ -1,0 +1,42 @@
+$theme-green-dark: #89B0AE;
+$theme-green-light: #BEE3DB;
+$theme-green-hiperlight: rgba(137, 176, 174, 0.13);
+$theme-gray-dark:#555B6E;
+$theme-gray-light: #C4C4C4;
+$theme-gray-light-bg:#E5E5E5;
+$theme-orange-light:#FFD6BA;
+
+// Navbar theme
+.nav-color-theme {
+  background-color: $theme-green-dark;
+}
+
+// Buttons theme
+.theme-gray-dark-btn,
+.theme-gray-light-btn,
+.theme-green-light-btn,
+.theme-orange-ligth-btn {
+  border: $theme-gray-dark;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.theme-gray-dark-btn {
+  background-color:$theme-gray-dark;
+  color: white;
+}
+
+.theme-gray-light-btn {
+  background-color:$theme-gray-light;
+  color: black;
+}
+
+.theme-green-light-btn {
+  background-color:$theme-green-light;
+  color: black;
+}
+
+.theme-orange-ligth-btn {
+  background-color: $theme-orange-light;
+  color:black
+}
