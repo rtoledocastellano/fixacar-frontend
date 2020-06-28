@@ -22,8 +22,8 @@
       </div>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
@@ -56,30 +56,37 @@
 
     </nav>
   </div>
-
-  <div class="container intro-form">
-    <div class="row mb-3 justify-content-center">
-      <button class="btn btn-bg-white btn-outline-secondary col-5" type="button"><i class="fas fa-car"></i></button>
-      <button class="btn btn-bg-white btn-outline-secondary col-5" type="button"><i class="fas fa-motorcycle"></i></button>
+  <!-- Filter -->
+  <div class="row mx-3 mb-3">
+    <select class="custom-select col">
+      <option selected>Ordenar por...</option>
+      <option value="1">Puntuación de usuarios</option>
+      <option value="2">Precio</option>
+    </select>
+    <select class="custom-select col">
+      <option selected>Filtrar...</option>
+      <option value="1">Coche de sustitución</option>
+      <option value="2">Servicio de recogida</option>
+    </select>
+  </div>
+  <!-- Workshop card -->
+  <div class="container mb-3">
+    <div class="card">
+      <div class="row no-gutters">
+        <div class="col-auto">
+          <img src="//placehold.it/150x200?text=Workshop+image" class="img-fluid" alt="">
+        </div>
+        <div class="col">
+          <div class="card-block px-2">
+            <h4 class="card-title">Workshop name</h4>
+            <p class="card-text">Car rating</p>
+            <p class="card-text">Price</p>
+            <p class="card-text">Address</p>
+            <a href="#" class="btn theme-green-light-btn btn-block">Solicitar presupuesto</a>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="row mb-3 justify-content-center">
-      <input class="form-control col-10" type="text" placeholder="Las Palmas de Gran Canaria" readonly>
-    </div>
-
-    <div class="mb-3 row justify-content-center">
-       <!--<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>-->
-       <select class="custom-select col-10" id="inlineFormCustomSelect">
-          <option value="1">Mecánica</option>
-          <option value="2">Chapa y Pintura</option>
-          <option value="3">Electricidad</option>
-      </select>
-    </div>
-
-    <div class="row justify-content-center mt-5">
-      <button type="button" class="btn theme-gray-dark-btn col-10">Buscar</button>
-    </div>
-
   </div>
 
   <!-- Scripts -->
@@ -93,7 +100,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
-
 
 </body>
 
