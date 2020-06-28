@@ -31,6 +31,18 @@
   color: black;
 }
 
+.text-gray-light {
+  color: #C4C4C4;
+}
+
+.text-gray-dark {
+  color: #555B6E;
+}
+
+.text-green-dark {
+  color: #89B0AE;
+}
+
 .intro-form {
   background-color: #BEE3DB;
   padding: 30px 10px;
