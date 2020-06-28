@@ -10,6 +10,7 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/ea12866966.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/css/style.css">
+  <link rel="stylesheet" href="./styles/css/rating-form.css">
 </head>
 
 <body>
@@ -57,17 +58,33 @@
     </div>
   </nav>
 
-  <!-- WS Info -->
-<div class="containter mt-3 ml-3">
+  <!-- Header -->
+<div class="container-fluid ">
 
-  <div class="row">
-     <div class="col-10">
-      <h5 class="font-weight-bold">Taller Domi</h5>
+  <div class="row pt-4 pb-4 bg-green-light">
+     <div class="col-12">
+      <h1 class="text-gray-dark font-weight-bold text-center"><i class="fas fa-thumbs-up"></i></h1>
+      <h6 class="text-gray-dark font-weight-bold text-center">Déjanos tu opinión</h6>
+    </div>
+  </div>
+</div>
+
+  <!-- Form -->
+<div class="container">
+  <div class="row pt-3">
+    <div class="col-12">
+     <h5 class="font-weight-bold">Déjanos tu opinión</h5>
+    </div>
+  </div>
+
+  <div class="row pt-3">
+    <div class="col-12">
+     <span class="font-weight-bold text-gray-dark">¿Cuál ha sido tu satisfacción general con el taller?</span>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-10">
+    <div class="col-12 text-center">
       <i class="fas fa-car text-green-dark"></i>
       <i class="fas fa-car text-green-dark"></i>
       <i class="fas fa-car text-green-dark"></i>
@@ -76,52 +93,14 @@
     </div>
   </div>
 
-
-  <div class="row">
-    <div class="col-10 text-gray-dark">
-      <i class="fas fa-euro-sign"></i>
-      <i class="fas fa-euro-sign"></i>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-light">
-      <span><i class="fas fa-map-marker-alt"></i> Calle Agaete 34, 35010 Las Palmas de Gran Canaria</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-dark font-weight-bold">
-      <span>Horario:</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-light">
-      <span>Lunes a Viernes: 8:00 a 16:00</span>
-    </div>
-  </div>
-
-  <div class="row justify-content-center mt-3">
-    <button type="button" class="btn theme-green-light-btn col-3 mr-1">Llamar</button>
-    <button type="button" class="btn theme-green-light-btn col-6 ml-1">Pide tu Presupuesto</button>
-  </div>
-</div>
-
-  <!-- Ratings -->
-
-<div class="container mt-4">
-  <div class="row">
+  <div class="row pt-3">
     <div class="col-12">
-      <h6 class="font-weight-bold">Puntuaciones</h6>
+     <span class="font-weight-bold text-gray-dark">¿Cómo evaluarías la calidad de tu reparación?</span>
     </div>
   </div>
 
-  <div class="row mt-3">
-    <div class="col-6 text-gray-dark font-weight-bold">
-      <span><i class="fas fa-award"></i>  Calidad</span>
-    </div>
-    <div class="col-6 text-right">
+  <div class="row">
+    <div class="col-12 text-center">
       <i class="fas fa-circle text-green-dark"></i>
       <i class="fas fa-circle text-green-dark"></i>
       <i class="fas fa-circle text-green-dark"></i>
@@ -130,41 +109,47 @@
     </div>
   </div>
 
+  <div class="row pt-3">
+    <div class="col-12">
+     <span class="font-weight-bold text-gray-dark">¿Qué consideras sobre el precio del taller?</span>
+    </div>
+  </div>
+
   <div class="row">
-    <div class="col-6 text-gray-dark font-weight-bold">
-      <span><i class="fas fa-tag"></i></i> Precio</span>
-    </div>
-    <div class="col-6 text-right">
-      <i class="fas fa-euro-sign text-green-dark"></i>
-      <i class="fas fa-euro-sign text-green-dark"></i>
-      <i class="fas fa-euro-sign text-gray-light"></i>
+    <div class="col-12 text-center">
+      <i class="fas fa-euro-sign text-green-dark p-2"></i>
+      <i class="fas fa-euro-sign text-green-dark p-2"></i>
+      <i class="fas fa-euro-sign text-gray-light p-2"></i>
     </div>
   </div>
 
-  <div class="row justify-content-center mt-3">
-    <button type="button" class="btn theme-orange-ligth-btn col-10">Escribe tu reseña</button>
-  </div>
-
-  <div class="row mt-3">
+  <div class="row pt-3">
     <div class="col-12">
-      <h6 class="font-weight-bold">Opiniones de los usuarios</h6>
+      <textarea class="form-control" id="comments" rows="3" placeholder="Deja aquí tu comentario sobre la visita al taller"></textarea>
     </div>
   </div>
 
-  <div class="row mt-3">
-    <div class="col-12">
-      <span class="font-weight-bold text-gray-dark">Mistika</span>
-      <span class="small text-gray-dark">2 de Octubre de 2020</span>
-    </div>
-  </div>
-
-  <div class="row mt-2">
-    <div class="col-12 small text-gray-dark">
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque commodi, animi quaerat id molestiae cumque minus recusandae exercitationem sequi adipisci inventore modi similique veniam voluptas et impedit. Ad, vitae voluptate?</span>
-    </div>
+  <div class="row pt-4 justify-content-center">
+      <button type="button" class="btn theme-gray-light-btn col-4 m-2">Cancelar</button>
+      <button type="button" class="btn theme-green-light-btn col-4 m-2">Enviar</button>
   </div>
 
 </div>
+
+  <!-- Response -->
+  <div class="container">
+    <div class="row pt-3">
+      <div class="col-12">
+       <h5 class="font-weight-bold text-center">¡Muchas Gracias por tu opinión!</h5>
+      </div>
+    </div>
+
+     <div class="row pt-4 justify-content-center">
+        <button type="button" class="btn theme-green-light-btn col-10 m-2">Volver</button>
+    </div>
+
+  </div>
+
 
 
 
