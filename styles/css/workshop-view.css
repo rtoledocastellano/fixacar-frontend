@@ -1,0 +1,66 @@
+.nav-color-theme {
+  background-color: #89B0AE;
+}
+
+.theme-gray-dark-btn,
+.theme-gray-light-btn,
+.theme-green-light-btn,
+.theme-orange-ligth-btn {
+  border: #555B6E;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.theme-gray-dark-btn {
+  background-color: #555B6E;
+  color: white;
+}
+
+.theme-gray-light-btn {
+  background-color: #C4C4C4;
+  color: black;
+}
+
+.theme-green-light-btn {
+  background-color: #BEE3DB;
+  color: black;
+}
+
+.theme-orange-ligth-btn {
+  background-color: #FFD6BA;
+  color: black;
+}
+
+.main-ws {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.secondary-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comment-text {
+  font-size: 12px;
+}
+
+.text-gray-light {
+  color: #C4C4C4;
+}
+
+.text-gray-dark {
+  color: #555B6E;
+}
+
+.text-green-dark {
+  color: #89B0AE;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-right {
+  text-align: right;
+}
