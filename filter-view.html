@@ -70,23 +70,8 @@
     </select>
   </div>
   <!-- Workshop card -->
-  <div class="container mb-3">
-    <div class="card">
-      <div class="row no-gutters">
-        <div class="col-auto">
-          <img src="//placehold.it/150x200?text=Workshop+image" class="img-fluid" alt="">
-        </div>
-        <div class="col">
-          <div class="card-block px-2">
-            <h4 class="card-title">Workshop name</h4>
-            <p class="card-text">Car rating</p>
-            <p class="card-text">Price</p>
-            <p class="card-text">Address</p>
-            <a href="#" class="btn theme-green-light-btn btn-block">Solicitar presupuesto</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="container mb-3" id="workshop-list">
+
   </div>
 
   <!-- Scripts -->
@@ -100,8 +85,63 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+  <script>
+    function ready(fn) {
+      if (document.readyState != 'loading'){
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    function getUrlParams(search) {
+      const hashes = search.slice(search.indexOf('?') + 1).split('&')
+      const params = {}
+      hashes.map(hash => {
+        const [key, val] = hash.split('=')
+        params[key] = decodeURIComponent(val)
+      })
+      return params
+    }
+
+    ready(function(){
+      const API = axios.create({
+        baseURL: 'http://localhost:3000/api',
+        timeout: 1000,
+      });
+      const params = getUrlParams(window.location.search)
+      const vehicle = params.vehicle === 'moto' ? 'moto=true' : 'car=true'
+
+      API
+        .get(`/workshops?service=${params.service}&${vehicle}`)
+        .then(results => {
+          //document.getElementById('address').innerHTML = results.data.address
+          results.data.forEach(car => {
+            const card = document.createElement('div')
+            card.classList.add('card')
+            card.classList.add('mb-3')
+            card.innerHTML = `
+              <div class="row no-gutters">
+                <div class="col-auto">
+                  <img src="//placehold.it/150x200?text=Workshop+image" class="img-fluid" alt="">
+                </div>
+                <div class="col">
+                  <div class="card-block px-2">
+                    <h4 class="card-title">${car.name}</h4>
+                    <p class="card-text">${car.schedule}</p>
+                    <p class="card-text">${car.telephone}</p>
+                    <p class="card-text">${car.address}</p>
+                    <a href="workshop-view.html?id=${car._id}" class="btn theme-green-light-btn btn-block">Solicitar presupuesto</a>
+                  </div>
+                </div>
+              </div>
+            </div>`
+            document.getElementById('workshop-list').appendChild(card)
+          })
+        })
+    })
+  </script>
 </body>
-
-
 </html>
