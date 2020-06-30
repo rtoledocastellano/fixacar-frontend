@@ -168,7 +168,6 @@
         timeout: 1000,
       });
       const params = getUrlParams(window.location.search)
-      const vehicle = params.vehicle === 'moto' ? 'moto=true' : 'car=true'
 
       API
         .get(`/workshops/${params.id}`)
