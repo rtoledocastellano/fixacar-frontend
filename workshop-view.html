@@ -58,112 +58,75 @@
   </nav>
 
   <!-- WS Info -->
-<div class="container">
+  <div class="container">
 
-  <div class="row pt-3">
-    <div class="col-12">
-     <h5 class="font-weight-bold">Taller Domi</h5>
+    <!-- Name -->
+    <div class="row pt-3">
+      <div class="col-12">
+        <h5 id="ws-name" class="font-weight-bold"></h5>
+      </div>
+    </div>
+
+    <!-- General opinion -->
+    <div id="ws-car-pt" class="row"></div>
+
+    <!-- Price opinion -->
+    <div id="ws-price" class="row"></div>
+
+    <!-- Address -->
+    <div class="row mt-2">
+      <div class="col-10 text-gray-light">
+        <span><i class="fas fa-map-marker-alt"></i> </span>
+        <span id="ws-address"></span>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-10 text-gray-dark font-weight-bold">
+        <span>Horario:</span>
+      </div>
+    </div>
+
+    <!-- Schedule -->
+    <div class="row">
+      <div class="col-10 text-gray-light">
+        <span id="ws-schedule"></span>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+      <button type="button" class="btn theme-green-light-btn col-4 mr-1">Llamar</button>
+      <button type="button" class="btn theme-green-light-btn col-6 ml-1">Pide tu Presupuesto</button>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-10">
-      <i class="fas fa-car text-green-dark"></i>
-      <i class="fas fa-car text-green-dark"></i>
-      <i class="fas fa-car text-green-dark"></i>
-      <i class="fas fa-car text-green-dark"></i>
-      <i class="fas fa-car text-gray-light"></i>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-dark">
-      <i class="fas fa-euro-sign"></i>
-      <i class="fas fa-euro-sign"></i>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-light">
-      <span><i class="fas fa-map-marker-alt"></i> </span>
-      <span id="address">Calle Agaete 34, 35010 Las Palmas de Gran Canaria</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-dark font-weight-bold">
-      <span>Horario:</span>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-10 text-gray-light">
-      <span>Lunes a Viernes: 8:00 a 16:00</span>
-    </div>
-  </div>
-
-  <div class="row justify-content-center mt-3">
-    <button type="button" class="btn theme-green-light-btn col-4 mr-1">Llamar</button>
-    <button type="button" class="btn theme-green-light-btn col-6 ml-1">Pide tu Presupuesto</button>
-  </div>
-</div>
 
   <!-- Ratings -->
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-12">
-      <h6 class="font-weight-bold">Puntuaciones</h6>
-    </div>
-  </div>
+  <div class="container mt-4">
+    <hr>
 
-  <div class="row mt-3">
-    <div class="col-6 text-gray-dark font-weight-bold">
-      <span><i class="fas fa-award"></i>  Calidad</span>
+    <!-- Quality opinion -->
+    <div class="row mt-3">
+      <div class="col-6 text-gray-dark font-weight-bold">
+        <span><i class="fas fa-award"></i> Calidad</span>
+      </div>
+      <div id="ws-quality" class="col-6 text-right"></div>
     </div>
-    <div class="col-6 text-right">
-      <i class="fas fa-circle text-green-dark"></i>
-      <i class="fas fa-circle text-green-dark"></i>
-      <i class="fas fa-circle text-green-dark"></i>
-      <i class="fas fa-circle text-gray-light"></i>
-      <i class="fas fa-circle text-gray-light"></i>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-6 text-gray-dark font-weight-bold">
-      <span><i class="fas fa-tag"></i></i> Precio</span>
-    </div>
-    <div class="col-6 text-right">
-      <i class="fas fa-euro-sign text-green-dark"></i>
-      <i class="fas fa-euro-sign text-green-dark"></i>
-      <i class="fas fa-euro-sign text-gray-light"></i>
-    </div>
-  </div>
+    <hr>
 
-  <div class="row justify-content-center mt-3">
-    <button type="button" class="btn theme-orange-ligth-btn col-10">Escribe tu reseña</button>
-  </div>
-
-  <div class="row mt-3">
-    <div class="col-12">
-      <h6 class="font-weight-bold">Opiniones de los usuarios</h6>
+    <div class="row justify-content-center mt-3">
+      <button type="button" class="btn theme-orange-ligth-btn col-10">Escribe tu reseña</button>
     </div>
-  </div>
 
-  <div class="row mt-3">
-    <div class="col-12">
-      <span class="font-weight-bold text-gray-dark">Mistika</span>
-      <span class="small text-gray-dark">2 de Octubre de 2020</span>
+    <div class="row mt-3">
+      <div class="col-12">
+        <h6 class="font-weight-bold">Opiniones de los usuarios</h6>
+      </div>
     </div>
-  </div>
 
-  <div class="row mt-2">
-    <div class="col-12 small text-gray-dark">
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque commodi, animi quaerat id molestiae cumque minus recusandae exercitationem sequi adipisci inventore modi similique veniam voluptas et impedit. Ad, vitae voluptate?</span>
-    </div>
-  </div>
+    <div id="ratings-list"></div>
 
-</div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -177,8 +140,118 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
 
+  <script>
+
+    const MAX_PUNCTUATION = 5;
+
+    function ready(fn) {
+      if (document.readyState != 'loading') {
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    function getUrlParams(search) {
+      const hashes = search.slice(search.indexOf('?') + 1).split('&')
+      const params = {}
+      hashes.map(hash => {
+        const [key, val] = hash.split('=')
+        params[key] = decodeURIComponent(val)
+      })
+      return params
+    }
+
+    ready(function () {
+      const API = axios.create({
+        baseURL: 'http://localhost:3000/api',
+        timeout: 1000,
+      });
+      const params = getUrlParams(window.location.search)
+      const vehicle = params.vehicle === 'moto' ? 'moto=true' : 'car=true'
+
+      API
+        .get(`/workshops/${params.id}`)
+        .then(results => {
+          console.log(results.data)
+
+          // General opinion
+          let wsCarPt = document.createElement('div')
+          let ptNum = results.data.pt_general
+
+          for (var i = 0; i < MAX_PUNCTUATION; i++) {
+            wsCarPt.classList.add('col-10')
+
+            if (ptNum > 0) {
+              wsCarPt.innerHTML += `<i id="car1" class="fas fa-car text-green-dark fa-2x mr-1"></i>`
+              ptNum--;
+            } else {
+              wsCarPt.innerHTML += `<i id="car5" class="fas fa-car text-gray-light fa-2x mr-1"></i>`
+            }
+          }
+          document.getElementById('ws-car-pt').appendChild(wsCarPt)
+
+          // Quality opinion
+          let wsQuality = document.createElement('div')
+          let ptQa = results.data.pt_quality
+
+          for (var i = 0; i < MAX_PUNCTUATION; i++) {
+
+            if (ptQa > 0) {
+              wsQuality.innerHTML += `<i class="fas fa-circle text-green-dark mr-1"></i>`
+              ptQa--;
+            } else {
+              wsQuality.innerHTML += `<i class="fas fa-circle text-gray-light mr-1"></i>`
+            }
+          }
+          document.getElementById('ws-quality').appendChild(wsQuality)
+
+          document.getElementById('ws-name').innerHTML = results.data.name
+          document.getElementById('ws-address').innerHTML = results.data.address
+          document.getElementById('ws-schedule').innerHTML = results.data.schedule
+
+          // Price opinion
+          let wsPrice = document.createElement('div')
+          wsPrice.classList.add('col-10')
+          wsPrice.classList.add('text-gray-dark')
+
+          for (var i = 0; i < results.data.pt_price; i++) {
+            wsPrice.innerHTML += `<i class="fas fa-euro-sign"></i>`
+          }
+
+          document.getElementById('ws-price').appendChild(wsPrice)
+
+          document.getElementById('ws-name').innerHTML = results.data.name
+          document.getElementById('ws-address').innerHTML = results.data.address
+          document.getElementById('ws-schedule').innerHTML = results.data.schedule
+
+          //Ratings
+          results.data.ratings.forEach(rating => {
+            let ratingTitle = document.createElement('div')
+            ratingTitle.classList.add('row')
+            ratingTitle.classList.add('mt-3')
+            //TODO: Add user name
+            ratingTitle.innerHTML = `
+                <div class="col-12">
+                  <span class="font-weight-bold text-gray-dark">Marilu</span>
+                  <span class="small text-gray-dark">${rating.createdAt}</span>
+                </div>
+              </div>`
+            document.getElementById('ratings-list').appendChild(ratingTitle)
+
+            let ratingContent = document.createElement('div')
+            ratingContent.classList.add('row')
+            ratingContent.classList.add('mt-2')
+            ratingContent.innerHTML = `
+                <div class="col-12 small text-gray-dark">
+                  <span>${rating.comment}</span>
+                </div>`
+            document.getElementById('ratings-list').appendChild(ratingContent)
+          })
+        })
+    })
+  </script>
 
 </body>
-
 
 </html>

@@ -14,8 +14,8 @@
 
 <body>
   <!-- Navbar -->
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg nav-color-theme navbar-light mb-25">
+  <nav class="navbar navbar-expand-lg nav-color-theme navbar-light mb-25">
+    <div class="container-fluid">
 
       <div>
         <a class="navbar-brand text-white font-weight-bold" href="./index.html">fixacar.com</a>
@@ -54,10 +54,11 @@
         </ul>
       </div>
 
-    </nav>
-  </div>
+    </div>
+  </nav>
+
   <!-- Filter -->
-  <div class="row mx-3 mb-3">
+  <div class="row px-2 mb-3">
     <select class="custom-select col">
       <option selected>Ordenar por...</option>
       <option value="1">Puntuación de usuarios</option>
@@ -69,10 +70,9 @@
       <option value="2">Servicio de recogida</option>
     </select>
   </div>
-  <!-- Workshop card -->
-  <div class="container mb-3" id="workshop-list">
 
-  </div>
+  <!-- Workshop card -->
+  <div class="container mb-3" id="workshop-list"></div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -117,18 +117,17 @@
       API
         .get(`/workshops?service=${params.service}&${vehicle}`)
         .then(results => {
-          //document.getElementById('address').innerHTML = results.data.address
           results.data.forEach(car => {
             const card = document.createElement('div')
             card.classList.add('card')
-            card.classList.add('mb-3')
+            card.classList.add('mb-2')
             card.innerHTML = `
               <div class="row no-gutters">
                 <div class="col-auto">
-                  <img src="//placehold.it/150x200?text=Workshop+image" class="img-fluid" alt="">
+                  <img src="//placehold.it/150x212?text=Workshop+image" class="img-fluid" alt="">
                 </div>
                 <div class="col">
-                  <div class="card-block px-2">
+                  <div class="card-block px-2 py-2">
                     <h4 class="card-title">${car.name}</h4>
                     <p class="card-text">${car.schedule}</p>
                     <p class="card-text">${car.telephone}</p>
