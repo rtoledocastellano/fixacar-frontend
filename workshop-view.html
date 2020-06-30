@@ -205,7 +205,7 @@
           let contactBtn = document.createElement('div')
           contactBtn.innerHTML = `
           <a a href = "${results.data.telephone}" class="btn theme-green-light-btn mr-1" > Llamar</a>
-          <a a href = "budget-form.html?id=${params._id}" class="btn theme-green-light-btn" > Solicitar presupuesto</a>`
+          <a a href = "budget-form.html?id=${params.id}" class="btn theme-green-light-btn" > Solicitar presupuesto</a>`
           document.getElementById('contact-buttons').appendChild(contactBtn)
 
           document.getElementById('ws-name').innerHTML = results.data.name
@@ -215,7 +215,7 @@
           // Rating button
           let ratingBtn = document.createElement('div')
           ratingBtn.classList.add('col-10')
-          ratingBtn.innerHTML = `<a href = "rating-form.html?id=${params._id}" class="btn theme-orange-ligth-btn btn-block" > Solicitar presupuesto</a>`
+          ratingBtn.innerHTML = `<a href = "rating-form.html?id=${params.id}" class="btn theme-orange-ligth-btn btn-block" > Solicitar presupuesto</a>`
           document.getElementById('rating-btn').appendChild(ratingBtn)
 
           // Price opinion
