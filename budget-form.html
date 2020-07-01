@@ -58,66 +58,67 @@
   </nav>
 
   <!-- Header -->
-<div class="container-fluid ">
+  <div class="container-fluid ">
 
-  <div class="row py-4 bg-deco">
-     <div class="col-12">
-      <h1 class="text-gray-dark font-weight-bold text-center"><i class="fas fa-euro-sign"></i></h1>
-      <h6 class="text-gray-dark font-weight-bold text-center">Presupuesto</h6>
+    <div class="row py-4 bg-deco">
+      <div class="col-12">
+        <h1 class="text-gray-dark font-weight-bold text-center"><i class="fas fa-euro-sign"></i></h1>
+        <h6 class="text-gray-dark font-weight-bold text-center">Presupuesto</h6>
+      </div>
     </div>
   </div>
-</div>
 
   <!-- Form -->
-<div class="container">
-  <div class="row pt-3">
-    <div class="col-12">
-     <h5 class="font-weight-bold">Taller Domi</h5>
-     <p class="text-gray-dark small">Tu presupuesto sin compromiso. Déjanos tus datos aquí:</p>
-    </div>
-  </div>
-
-  <form class="custom-form">
-    <div class="form-group">
-      <label for="budget-form">Matrícula</label>
-      <input type="matricula" class="form-control" id="matricula" placeholder="E1234ABC">
-    </div>
-    <div class="form-group">
-      <label for="budget-form">Bastidor</label>
-      <input type="bastidor" class="form-control" id="bastidor" placeholder="WVWZZZ123456789">
-    </div>
-    <div class="form-group">
-      <label for="budget-form">Marca</label>
-      <input type="marca" class="form-control" id="marca" placeholder="Volkswagen">
-    </div>
-    <div class="form-group">
-      <label for="budget-form">Modelo</label>
-      <input type="modelo" class="form-control" id="modelo" placeholder="Golf">
-    </div>
-
-    <div class="form-group">
-      <textarea class="form-control text-center" id="request" rows="3" placeholder="¿Qué necesita que miremos para su coche?"></textarea>
-    </div>
-
-    <div class="row pt-4 justify-content-center">
-      <button type="submit" class="btn theme-green-light-btn col-10 m-2">Enviar</button>
-      <button type="submit" class="btn theme-gray-light-btn col-10 m-2">Cancelar</button>
-  </div>
-
-  </form>
-
-</div>
-
-  <!-- Response -->
-  <div class="container">
+  <div class="container" id="form">
     <div class="row pt-3">
       <div class="col-12">
-       <h5 class="font-weight-bold text-center">¡En breve nos pondremos en contacto contigo!</h5>
+        <h5 class="font-weight-bold">Taller Domi</h5>
+        <p class="text-gray-dark small">Tu presupuesto sin compromiso. Déjanos tus datos aquí:</p>
       </div>
     </div>
 
-     <div class="row pt-4 justify-content-center">
-        <button type="button" class="btn theme-green-light-btn col-10 m-2">Volver</button>
+    <form class="custom-form">
+      <div class="form-group">
+        <label for="budget-form">Matrícula</label>
+        <input type="matricula" class="form-control" id="matricula" placeholder="E1234ABC">
+      </div>
+      <div class="form-group">
+        <label for="budget-form">Bastidor</label>
+        <input type="bastidor" class="form-control" id="bastidor" placeholder="WVWZZZ123456789">
+      </div>
+      <div class="form-group">
+        <label for="budget-form">Marca</label>
+        <input type="marca" class="form-control" id="marca" placeholder="Volkswagen">
+      </div>
+      <div class="form-group">
+        <label for="budget-form">Modelo</label>
+        <input type="modelo" class="form-control" id="modelo" placeholder="Golf">
+      </div>
+
+      <div class="form-group">
+        <textarea class="form-control text-center" id="request" rows="3"
+          placeholder="¿Qué necesita que miremos para su coche?"></textarea>
+      </div>
+
+      <div class="row pt-4 justify-content-center">
+        <button type="submit" id="sent" class="btn theme-green-light-btn col-10 m-2">Enviar</button>
+        <button type="submit" id="back" class="btn theme-gray-light-btn col-10 m-2 hBack">Cancelar</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <!-- Response -->
+  <div class="container d-none" id="response">
+    <div class="row pt-3">
+      <div class="col-12">
+        <h5 class="font-weight-bold text-center">¡En breve nos pondremos en contacto contigo!</h5>
+      </div>
+    </div>
+
+    <div class="row pt-4 justify-content-center">
+      <button type="button" class="btn theme-green-light-btn col-10 m-2" id="index">Volver</button>
     </div>
 
   </div>
@@ -133,7 +134,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
-
+  <script src="./scripts/general.js"></script>
 
 </body>
 
