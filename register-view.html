@@ -18,6 +18,7 @@
     <div class="container-fluid">
 
       <div>
+        <button class="btn hBack font-weight-bold text-white" type="button"><i class="fas fa-arrow-left"></i></button>
         <a class="navbar-brand text-white font-weight-bold" href="./index.html">fixacar.com</a>
       </div>
 
@@ -130,6 +131,12 @@
           .catch(err => console.error(err))
       })
     </script>
+      <script>
+        $(".hBack").on("click", function (e) {
+          e.preventDefault();
+          window.history.back();
+        });
+      </script>
 
 
 </body>

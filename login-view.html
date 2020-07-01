@@ -18,6 +18,7 @@
     <div class="container-fluid">
 
       <div>
+        <button class="btn hBack font-weight-bold text-white" type="button"><i class="fas fa-arrow-left"></i></button>
         <a class="navbar-brand text-white font-weight-bold" href="./index.html">fixacar.com</a>
       </div>
 
@@ -27,8 +28,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="d-lg-none nav-item">
-            <a class="nav-link text-white font-weight-bold" href="#">
+          <li class="d-lg-none nav-item"  href="./login-view.html">
+            <a class="nav-link text-white font-weight-bold">
               <i class="far fa-user"></i>
               Login
             </a>
@@ -118,6 +119,12 @@
           window.location = 'index.html'
         })
     })
+</script>
+  <script>
+    $(".hBack").on("click", function (e) {
+      e.preventDefault();
+      window.history.back();
+    });
   </script>
 
 </body>
