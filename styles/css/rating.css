@@ -1,0 +1,83 @@
+.nav-color-theme {
+  background-color: #89B0AE;
+}
+
+.theme-gray-dark-btn,
+.theme-gray-light-btn,
+.theme-green-light-btn,
+.theme-orange-ligth-btn {
+  border: #555B6E;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.theme-gray-dark-btn {
+  background-color: #555B6E;
+  color: white;
+}
+
+.theme-gray-light-btn {
+  background-color: #C4C4C4;
+  color: black;
+}
+
+.theme-green-light-btn {
+  background-color: #BEE3DB;
+  color: black;
+}
+
+.theme-orange-ligth-btn {
+  background-color: #FFD6BA;
+  color: black;
+}
+
+.text-gray-light {
+  color: #C4C4C4;
+}
+
+.text-gray-dark {
+  color: #555B6E;
+}
+
+.text-green-dark {
+  color: #89B0AE;
+}
+
+.custom-form input {
+  border: none;
+  border-bottom: 2px solid #89B0AE;
+}
+
+.bg-deco {
+  background-color: rgba(137, 176, 174, 0.13);
+  height: 120px;
+}
+
+.range-wrap {
+  position: relative;
+  margin: 0 auto 3rem;
+}
+
+.form-control-range {
+  width: 100%;
+}
+
+.bubble {
+  background: #89B0AE;
+  color: white;
+  padding: 4px 12px;
+  position: absolute;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #89B0AE;
+  top: -1px;
+  left: 50%;
+}
