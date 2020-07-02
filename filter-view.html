@@ -59,13 +59,13 @@
 
   <!-- Filter -->
   <div class="row px-2 mb-3">
-    <select class="custom-select col">
-      <option selected>Ordenar por...</option>
-      <option value="1">Puntuación de usuarios</option>
-      <option value="2">Precio</option>
+    <select class="custom-select col" id="order-select">
+      <option disabled selected>Ordenar por...</option>
+      <option value="pt_general">Puntuación de usuarios</option>
+      <option value="pt_price">Precio</option>
     </select>
     <select class="custom-select col">
-      <option selected>Filtrar...</option>
+      <option disabled selected>Filtrar...</option>
       <option value="1">Coche de sustitución</option>
       <option value="2">Servicio de recogida</option>
     </select>
@@ -108,6 +108,16 @@
     }
 
     ready(function(){
+
+      document.getElementById('order-select').addEventListener('change', function(e) {
+
+        let url = new URL(window.location);
+        let params = new URLSearchParams(url.search.slice(1));
+        params.set('order', document.getElementById('order-select').value);
+        window.location = `${window.location.origin}${window.location.pathname}?${params.toString()}`
+
+      })
+
       const API = axios.create({
         baseURL: 'http://localhost:3000/api',
         timeout: 1000,
@@ -116,7 +126,7 @@
       const vehicle = params.vehicle === 'moto' ? 'moto=true' : 'car=true'
 
       API
-        .get(`/workshops?service=${params.service}&${vehicle}`)
+        .get(`/workshops?service=${params.service}&${vehicle}&order=${params.order}`)
         .then(results => {
           results.data.forEach(car => {
             const card = document.createElement('div')
