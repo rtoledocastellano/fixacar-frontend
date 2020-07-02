@@ -72,7 +72,7 @@
   <div class="container" id="form">
     <div class="row pt-3">
       <div class="col-12">
-        <h5 class="font-weight-bold">Taller Domi</h5>
+        <h5 class="font-weight-bold" id="workshopName">Taller Domi</h5>
         <p class="text-gray-dark small">Tu presupuesto sin compromiso. Déjanos tus datos aquí:</p>
       </div>
     </div>
@@ -101,8 +101,8 @@
       </div>
 
       <div class="row pt-4 justify-content-center">
-        <button type="submit" id="sent" class="btn theme-green-light-btn col-10 m-2">Enviar</button>
-        <button type="submit" id="back" class="btn theme-gray-light-btn col-10 m-2 hBack">Cancelar</button>
+        <button type="submit" id="send" class="btn theme-green-light-btn col-10 m-2">Enviar</button>
+        <button type="submit" class="btn theme-gray-light-btn col-10 m-2 hBack">Cancelar</button>
       </div>
 
     </form>
@@ -118,7 +118,7 @@
     </div>
 
     <div class="row pt-4 justify-content-center">
-      <button type="button" class="btn theme-green-light-btn col-10 m-2" id="index">Volver</button>
+      <button type="button" class="btn theme-green-light-btn col-10 m-2 hBack">Volver</button>
     </div>
 
   </div>
@@ -151,6 +151,65 @@
     login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./login-view.html">
     <i class="far fa-user"></i>${userName}</a>`
   }
+  </script>
+   <script>
+   function ready(fn) {
+      if (document.readyState != 'loading') {
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    function getUrlParams(search) {
+      const hashes = search.slice(search.indexOf('?') + 1).split('&')
+      const params = {}
+      hashes.map(hash => {
+        const [key, val] = hash.split('=')
+        params[key] = decodeURIComponent(val)
+      })
+      return params
+    }
+
+    ready(function () {
+      const API = axios.create({
+        baseURL: 'http://localhost:3000/api',
+        timeout: 1000,
+      });
+      const params = getUrlParams(window.location.search)
+
+      API
+        .get(`/workshops/${params.id}`)
+        .then(results => {
+          document.getElementById('workshopName').innerText = results.data.name
+        })
+      })
+
+    document.getElementById('send').addEventListener('click', (e) => {
+      e.preventDefault()
+      const API = axios.create({
+        baseURL: 'http://localhost:3000/api',
+        timeout: 1000,
+        headers: {
+          token:  localStorage.getItem('token')
+        }
+      })
+      const params = getUrlParams(window.location.search)
+      const budgetInfo = {
+        workshop: params
+      }
+
+      API
+        .post(`/budgets/${params.id}`, budgetInfo)
+        .then(response => {
+          let form = document.getElementById('form')
+          form.setAttribute('class','d-none')
+          let answer = document.getElementById('response')
+          answer.removeAttribute('class')
+          answer.setAttribute('class','container')
+        }).catch(err => console.error(err))
+    })
+
   </script>
 
 </body>
