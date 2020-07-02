@@ -240,27 +240,26 @@
 
     document.getElementById('sendRatingBtn').addEventListener('click', (e) => {
       e.preventDefault()
-
+      const API = axios.create({
+        baseURL: 'http://localhost:3000/api',
+        timeout: 1000,
+        headers: {
+          token:  localStorage.getItem('token')
+        }
+      })
       const ratingInfo = {
         pt_general: document.getElementById('generalOpinion').value,
         pt_quality: document.getElementById('qualityOpinion').value,
         pt_price: document.getElementById('priceOpinion').value,
         comment: document.getElementById('userComment').value,
-        user: "5efe13b0db33c51201451b5e" //TODO: Pupulate from localStorage, necesario ampliar funcion login para aniadir id?
       }
-
-      const API = axios.create({
-        baseURL: 'http://localhost:3000/api',
-        timeout: 1000,
-      })
-
       const params = getUrlParams(window.location.search)
 
-      console.log(params)
       API
-        .post(`/workshops/${params.id}/ratings`, ratingInfo, { headers: { token: localStorage.getItem('token') } })
+        .post(`/workshops/${params.id}/ratings`, ratingInfo)
         .then(response => {
-          window.location = 'index.html'
+          alert('Gracias por dejar tu rating!')
+          window.history.go(-2)
         }).catch(err => console.error(err))
     })
 
