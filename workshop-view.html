@@ -239,10 +239,9 @@
             let ratingTitle = document.createElement('div')
             ratingTitle.classList.add('row')
             ratingTitle.classList.add('mt-3')
-            //TODO: Add user name
             ratingTitle.innerHTML = `
                 <div class="col-12">
-                  <span class="font-weight-bold text-gray-dark">Marilu</span>
+                  <span class="font-weight-bold text-gray-dark">${rating.user.name}</span>
                   <span class="small text-gray-dark">${rating.createdAt}</span>
                 </div>
               </div>`
