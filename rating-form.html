@@ -259,7 +259,6 @@
       API
         .post(`/workshops/${params.id}/ratings`, ratingInfo, { headers: { token: localStorage.getItem('token') } })
         .then(response => {
-          console.log(response.data)
           window.location = 'index.html'
         }).catch(err => console.error(err))
     })
