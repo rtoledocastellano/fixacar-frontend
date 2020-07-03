@@ -89,6 +89,8 @@
   <script src="./scripts/general.js"></script>
 
   <script>
+    const MAX_PUNCTUATION = 5;
+
     function ready(fn) {
       if (document.readyState != 'loading'){
         fn();
@@ -129,6 +131,8 @@
         .get(`/workshops?service=${params.service}&${vehicle}&order=${params.order}`)
         .then(results => {
           results.data.forEach(car => {
+            var ptNum = car.pt_general
+
             const card = document.createElement('div')
             card.classList.add('card')
             card.classList.add('mb-2')
@@ -140,15 +144,39 @@
                 <div class="col">
                   <div class="card-block px-2 py-2">
                     <h4 class="card-title">${car.name}</h4>
-                    <p class="card-text">${car.schedule}</p>
-                    <p class="card-text">${car.telephone}</p>
-                    <p class="card-text">${car.address}</p>
+                    <p class="card-text" id="ws-car-pt${car._id}"></p>
+                    <p class="card-text" id="ws-price${car._id}"></p>
+                    <p class="card-text"><i class="fas fa-map-marker-alt"></i> ${car.address}</p>
                     <a href="workshop-view.html?id=${car._id}" class="btn theme-green-light-btn btn-block">Solicitar presupuesto</a>
                   </div>
                 </div>
               </div>
             </div>`
             document.getElementById('workshop-list').appendChild(card)
+
+            // General opinion
+            let wsCarPt = document.createElement('div')
+
+            for (var i = 0; i < MAX_PUNCTUATION; i++) {
+
+              if (ptNum > 0) {
+                wsCarPt.innerHTML += `<i id="car1" class="fas fa-car text-green-dark fa-lg mr-1"></i>`
+                ptNum--;
+              } else {
+                wsCarPt.innerHTML += `<i id="car5" class="fas fa-car text-gray-light fa-lg mr-1"></i>`
+              }
+            }
+            document.getElementById(`ws-car-pt${car._id}`).appendChild(wsCarPt)
+
+            // Price opinion
+            let wsPrice = document.createElement('div')
+            wsPrice.classList.add('text-gray-dark')
+
+            for (var i = 0; i < car.pt_price; i++) {
+              wsPrice.innerHTML += `<i class="fas fa-euro-sign"></i> `
+            }
+
+            document.getElementById(`ws-price${car._id}`).appendChild(wsPrice)
           })
         })
     })
