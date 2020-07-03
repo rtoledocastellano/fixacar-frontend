@@ -81,7 +81,7 @@
       <input type="password" class="form-control" id="login_user_password" placeholder="Introduce tu contraseña">
     </div>
     <button id="registerBtn" type="submit" class="btn theme-green-light-btn btn-block mt-5">Login</button>
-    <button id="backBtn" type="submit" class="btn theme-gray-dark-btn btn-block mt-4">Crea una cuenta</button>
+    <button id="newAccount" type="submit" class="btn theme-gray-dark-btn btn-block mt-4">Crea una cuenta</button>
   </form>
 
   <!-- Scripts -->
@@ -141,6 +141,11 @@
       login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./login-view.html">
       <i class="far fa-user"></i> ${userName}</a>`
     }
+
+    document.getElementById(`newAccount`).addEventListener('click', (e) => {
+      e.preventDefault()
+      location.assign("./register-view.html")
+    })
     </script>
 </body>
 
