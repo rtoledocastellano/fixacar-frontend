@@ -143,7 +143,7 @@
             card.innerHTML = `
               <div class="row no-gutters">
                 <div class="col-4">
-                  <img src="${car.image_url}" class="img-fluid" alt="">
+                  <img src="https://via.placeholder.com/110x210" class="img-fluid" alt="">
                 </div>
                 <div class="col">
                   <div class="card-block px-2 py-2">
@@ -176,8 +176,12 @@
             let wsPrice = document.createElement('div')
             wsPrice.classList.add('text-gray-dark')
 
-            for (var i = 0; i < car.pt_price; i++) {
-              wsPrice.innerHTML += `<i class="fas fa-euro-sign"></i> `
+            if (car.pt_price > 0) {
+              for (var i = 0; i < car.pt_price; i++) {
+                wsPrice.innerHTML += `<i class="fas fa-euro-sign"></i> `
+              }
+            } else {
+              wsPrice.innerHTML = "Sin valoraciones"
             }
 
             document.getElementById(`ws-price${car._id}`).appendChild(wsPrice)
