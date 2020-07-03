@@ -147,11 +147,11 @@
                 </div>
                 <div class="col">
                   <div class="card-block px-2 py-2">
-                    <h4 class="card-title">${car.name}</h4>
+                    <h5 class="card-title">${car.name}</h5>
                     <p class="card-text" id="ws-car-pt${car._id}"></p>
                     <p class="card-text" id="ws-price${car._id}"></p>
                     <p class="card-text"><i class="fas fa-map-marker-alt"></i> ${car.address}</p>
-                    <a href="workshop-view.html?id=${car._id}" class="btn theme-green-light-btn btn-block">Solicitar presupuesto</a>
+                    <a href="workshop-view.html?id=${car._id}" id="car${car._id}" class="btn theme-green-light-btn btn-block">Solicitar presupuesto</a>
                   </div>
                 </div>
               </div>
@@ -181,6 +181,15 @@
             }
 
             document.getElementById(`ws-price${car._id}`).appendChild(wsPrice)
+
+            // Only auth users can ask for budgets and put comments
+            document.getElementById(`car${car._id}`).addEventListener('click', (e) => {
+
+              if (!localStorage.getItem('name')) {
+                e.preventDefault()
+                location.assign("./login-view.html")
+              }
+            })
           })
         })
     })
@@ -190,16 +199,15 @@
       let userName = localStorage.getItem('name')
 
       let login1 = document.getElementById('loginMobile')
-      login1.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./login-view.html">
-      <i class="far fa-user"></i>
-      ${userName}</a>`
+      login1.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./index.html">
+      <i class="far fa-user"></i> ${userName}</a>`
 
       let register = document.getElementById('Register')
       register.setAttribute('class','d-none')
 
       let login2 = document.getElementById('loginComputer')
-      login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./login-view.html">
-      <i class="far fa-user"></i>${userName}</a>`
+      login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./index.html">
+      <i class="far fa-user"></i> ${userName}</a>`
     }
     </script>
 </body>

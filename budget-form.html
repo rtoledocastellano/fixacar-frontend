@@ -46,7 +46,7 @@
             </a>
           </li>
           <li class="d-none d-lg-block nav-item" id="loginComputer">
-            <a class="nav-link text-white font-weight-bold"  href="./login-view.html">
+            <a class="nav-link text-white font-weight-bold" href="./login-view.html">
               <i class="far fa-user"></i>
               Login
             </a>
@@ -136,24 +136,23 @@
     crossorigin="anonymous"></script>
   <script src="./scripts/general.js"></script>
   <script>
-  if (localStorage.getItem('name')) {
-    let userName = localStorage.getItem('name')
+    if (localStorage.getItem('name')) {
+      let userName = localStorage.getItem('name')
 
-    let login1 = document.getElementById('loginMobile')
-    login1.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./login-view.html">
-    <i class="far fa-user"></i>
-    ${userName}</a>`
+      let login1 = document.getElementById('loginMobile')
+      login1.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./index.html">
+    <i class="far fa-user"></i> ${userName}</a>`
 
-    let register = document.getElementById('Register')
-    register.setAttribute('class','d-none')
+      let register = document.getElementById('Register')
+      register.setAttribute('class', 'd-none')
 
-    let login2 = document.getElementById('loginComputer')
-    login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./login-view.html">
-    <i class="far fa-user"></i>${userName}</a>`
-  }
+      let login2 = document.getElementById('loginComputer')
+      login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./index.html">
+    <i class="far fa-user"></i> ${userName}</a>`
+    }
   </script>
-   <script>
-   function ready(fn) {
+  <script>
+    function ready(fn) {
       if (document.readyState != 'loading') {
         fn();
       } else {
@@ -183,7 +182,7 @@
         .then(results => {
           document.getElementById('workshopName').innerText = results.data.name
         })
-      })
+    })
 
     document.getElementById('send').addEventListener('click', (e) => {
       e.preventDefault()
@@ -191,7 +190,7 @@
         baseURL: 'http://localhost:3000/api',
         timeout: 1000,
         headers: {
-          token:  localStorage.getItem('token')
+          token: localStorage.getItem('token')
         }
       })
       const params = getUrlParams(window.location.search)
@@ -203,10 +202,10 @@
         .post(`/budgets/${params.id}`, budgetInfo)
         .then(response => {
           let form = document.getElementById('form')
-          form.setAttribute('class','d-none')
+          form.setAttribute('class', 'd-none')
           let answer = document.getElementById('response')
           answer.removeAttribute('class')
-          answer.setAttribute('class','container')
+          answer.setAttribute('class', 'container')
         }).catch(err => console.error(err))
     })
 
