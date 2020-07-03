@@ -3,9 +3,12 @@ $theme-green-light: #BEE3DB;
 $theme-green-hiperlight: rgba(137, 176, 174, 0.13);
 $theme-gray-dark:#555B6E;
 $theme-gray-light: #C4C4C4;
-$theme-gray-light-bg:#E5E5E5;
+$theme-gray-light-bg:#F7F6F6;
 $theme-orange-light:#FFD6BA;
 
+.body-filter {
+  background-color: $theme-gray-light-bg;
+}
 // Navbar theme
 .nav-color-theme {
   background-color: $theme-green-dark;
