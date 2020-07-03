@@ -241,7 +241,6 @@
       API
         .post(`/workshops/${params.id}/ratings`, ratingInfo)
         .then(response => {
-          alert('Gracias por dejar tu rating!')
           window.history.go(-2)
         }).catch(err => console.error(err))
     })
