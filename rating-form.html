@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="d-none d-lg-block nav-item" id="loginComputer">
-            <a class="nav-link text-white font-weight-bold"  href="./login-view.html">
+            <a class="nav-link text-white font-weight-bold" href="./login-view.html">
               <i class="far fa-user"></i>
               Login
             </a>
@@ -70,110 +70,110 @@
   </div>
 
   <!-- Form -->
-  <form action="index.html" method="GET">
-    <div class="container">
-      <div class="row pt-3">
-        <div class="col-12">
-          <span class="font-weight-bold text-gray-dark">¿Cuál es tu satisfacción general con el taller?</span>
+  <div class="container" id="form">
+    <form action="index.html" method="GET">
+      <div class="container">
+        <div class="row pt-3">
+          <div class="col-12">
+            <span class="font-weight-bold text-gray-dark">¿Cuál es tu satisfacción general con el taller?</span>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-2">
+            <i class="fas fa-car text-green-dark fa-lg"></i>
+          </div>
+          <div class="col-10 text-right">
+            <i class="fas fa-car text-green-dark fa-lg"></i>
+            <i class="fas fa-car text-green-dark fa-lg"></i>
+            <i class="fas fa-car text-green-dark fa-lg"></i>
+            <i class="fas fa-car text-green-dark fa-lg"></i>
+            <i class="fas fa-car text-green-dark fa-lg"></i>
+          </div>
+        </div>
+
+        <div class="range-wrap">
+          <input name="generalOpinion" id="generalOpinion" type="range" class="form-control-range" min="1" max="5"
+            step="1">
+          <output class="bubble"></output>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <span class="font-weight-bold text-gray-dark">¿Cómo evaluarías la calidad del servicio?</span>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-2">
+            <i class="fas fa-circle text-green-dark"></i>
+          </div>
+          <div class="col-10 text-right">
+            <i class="fas fa-circle text-green-dark"></i>
+            <i class="fas fa-circle text-green-dark"></i>
+            <i class="fas fa-circle text-green-dark"></i>
+            <i class="fas fa-circle text-green-dark"></i>
+            <i class="fas fa-circle text-green-dark"></i>
+          </div>
+        </div>
+
+        <div class="range-wrap">
+          <input name="qualityOpinion" id="qualityOpinion" type="range" class="form-control-range" min="1" max="5"
+            step="1">
+          <output class="bubble"></output>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <span class="font-weight-bold text-gray-dark">¿Cómo consideras el precio del taller?</span>
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-2">
+            <i class="fas fa-euro-sign text-green-dark"></i>
+          </div>
+          <div class="col-10 text-right">
+            <i class="fas fa-euro-sign text-green-dark"></i>
+            <i class="fas fa-euro-sign text-green-dark"></i>
+            <i class="fas fa-euro-sign text-green-dark"></i>
+            <i class="fas fa-euro-sign text-green-dark"></i>
+            <i class="fas fa-euro-sign text-green-dark"></i>
+          </div>
+        </div>
+
+        <div class="range-wrap">
+          <input name="priceOpinion" id="priceOpinion" type="range" class="form-control-range" min="1" max="5" step="1">
+          <output class="bubble"></output>
+        </div>
+
+        <div class="row pt-3 mt-4">
+          <div class="col-12">
+            <textarea id="userComment" name="userComment" class="form-control" rows="3"
+              placeholder="Deja aquí tu comentario sobre la visita al taller"></textarea>
+          </div>
+        </div>
+
+        <div class="row pt-4 justify-content-center">
+          <button type="button" class="btn hBack theme-gray-light-btn col-5 m-2">Cancelar</button>
+          <input id="sendRatingBtn" type="submit" class="btn theme-green-light-btn col-5 m-2" value="Enviar">
         </div>
       </div>
-
-      <div class="row mt-2">
-        <div class="col-2">
-          <i class="fas fa-car text-green-dark fa-lg"></i>
-        </div>
-        <div class="col-10 text-right">
-          <i class="fas fa-car text-green-dark fa-lg"></i>
-          <i class="fas fa-car text-green-dark fa-lg"></i>
-          <i class="fas fa-car text-green-dark fa-lg"></i>
-          <i class="fas fa-car text-green-dark fa-lg"></i>
-          <i class="fas fa-car text-green-dark fa-lg"></i>
-        </div>
-      </div>
-
-      <div class="range-wrap">
-        <input name="generalOpinion" id="generalOpinion" type="range" class="form-control-range" min="1" max="5"
-          step="1">
-        <output class="bubble"></output>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <span class="font-weight-bold text-gray-dark">¿Cómo evaluarías la calidad del servicio?</span>
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-2">
-          <i class="fas fa-circle text-green-dark"></i>
-        </div>
-        <div class="col-10 text-right">
-          <i class="fas fa-circle text-green-dark"></i>
-          <i class="fas fa-circle text-green-dark"></i>
-          <i class="fas fa-circle text-green-dark"></i>
-          <i class="fas fa-circle text-green-dark"></i>
-          <i class="fas fa-circle text-green-dark"></i>
-        </div>
-      </div>
-
-      <div class="range-wrap">
-        <input name="qualityOpinion" id="qualityOpinion" type="range" class="form-control-range" min="1" max="5"
-          step="1">
-        <output class="bubble"></output>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <span class="font-weight-bold text-gray-dark">¿Cómo consideras el precio del taller?</span>
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-2">
-          <i class="fas fa-euro-sign text-green-dark"></i>
-        </div>
-        <div class="col-10 text-right">
-          <i class="fas fa-euro-sign text-green-dark"></i>
-          <i class="fas fa-euro-sign text-green-dark"></i>
-          <i class="fas fa-euro-sign text-green-dark"></i>
-          <i class="fas fa-euro-sign text-green-dark"></i>
-          <i class="fas fa-euro-sign text-green-dark"></i>
-        </div>
-      </div>
-
-      <div class="range-wrap">
-        <input name="priceOpinion" id="priceOpinion" type="range" class="form-control-range" min="1" max="5" step="1">
-        <output class="bubble"></output>
-      </div>
-
-      <div class="row pt-3 mt-4">
-        <div class="col-12">
-          <textarea id="userComment" name="userComment" class="form-control" rows="3"
-            placeholder="Deja aquí tu comentario sobre la visita al taller"></textarea>
-        </div>
-      </div>
-
-      <div class="row pt-4 justify-content-center">
-        <button type="button" class="btn hBack theme-gray-light-btn col-5 m-2">Cancelar</button>
-        <input id="sendRatingBtn" type="submit" class="btn theme-green-light-btn col-5 m-2" value="Enviar">
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
   <!-- Response -->
-  <!--
-  <div class="container">
+  <div class="container d-none" id="response">
     <div class="row pt-3">
       <div class="col-12">
-       <h5 class="font-weight-bold text-center">¡Muchas Gracias por tu opinión!</h5>
+        <h5 class="font-weight-bold text-center">¡Muchas Gracias por tu opinión!</h5>
       </div>
     </div>
 
-     <div class="row pt-4 justify-content-center">
-        <button type="button" class="btn theme-green-light-btn col-10 m-2">Volver</button>
+    <div class="row pt-4 justify-content-center">
+      <button type="button" class="btn hBack theme-green-light-btn col-10 m-2">Volver</button>
     </div>
 
   </div>
-  -->
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -227,7 +227,7 @@
         baseURL: 'http://localhost:3000/api',
         timeout: 1000,
         headers: {
-          token:  localStorage.getItem('token')
+          token: localStorage.getItem('token')
         }
       })
       const ratingInfo = {
@@ -241,7 +241,12 @@
       API
         .post(`/workshops/${params.id}/ratings`, ratingInfo)
         .then(response => {
-          window.history.go(-2)
+          let form = document.getElementById('form')
+          form.setAttribute('class', 'd-none')
+          let answer = document.getElementById('response')
+          answer.removeAttribute('class')
+          answer.setAttribute('class', 'container')
+          //window.history.go(-2)
         }).catch(err => console.error(err))
     })
 
@@ -255,12 +260,13 @@
       <i class="far fa-user"></i> ${userName}</a>`
 
       let register = document.getElementById('Register')
-      register.setAttribute('class','d-none')
+      register.setAttribute('class', 'd-none')
 
       let login2 = document.getElementById('loginComputer')
       login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./index.html">
       <i class="far fa-user"></i> ${userName}</a>`
     }
-    </script>
+  </script>
 </body>
+
 </html>
