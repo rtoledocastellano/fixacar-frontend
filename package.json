@@ -1,0 +1,25 @@
+{
+  "name": "fixacar-frontend",
+  "version": "1.0.0",
+  "description": "Your App to Select your Workshop",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server --cors='*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtoledocastellano/fixacar-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtoledocastellano/fixacar-frontend/issues"
+  },
+  "homepage": "https://github.com/rtoledocastellano/fixacar-frontend#readme"
+}
