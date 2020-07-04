@@ -51,6 +51,12 @@
               Login
             </a>
           </li>
+          <li class="d-none d-lg-block nav-item" id="RegisterComputer">
+            <a class="nav-link text-white font-weight-bold" href="register-view.html">
+              <i class="far fa-user"></i>
+              Register
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -145,6 +151,9 @@
 
       let register = document.getElementById('Register')
       register.setAttribute('class', 'd-none')
+
+      let register2 = document.getElementById('RegisterComputer')
+      register2.setAttribute('class', 'd-none')
 
       let login2 = document.getElementById('loginComputer')
       login2.innerHTML = `<a class="nav-link text-white font-weight-bold"  href="./index.html">
