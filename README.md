@@ -32,9 +32,11 @@ This code has used node modules, so the first step you have to do is install the
 `npm install`
 
 #Images
-![Alt text](https://ibb.co/SwCDvhN)
-![Alt text](https://ibb.co/9WNWtWq)
-![Alt text](https://ibb.co/nRqVP94)
+
+![Intro](https://ibb.co/SwCDvhN)
+![Intro]("https://ibb.co/SwCDvhN")
+![Workshops View](https://ibb.co/9WNWtWq)
+![Workshop Description](https://ibb.co/nRqVP94)
 
 
 
