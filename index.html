@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./styles/css/style.css">
 </head>
 
-<body class="main-view">
+<body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg nav-color-theme navbar-light mb-25">
     <div class="container-fluid">
@@ -49,44 +49,45 @@
 
     </div>
   </nav>
+  <div id="content">
+    <div id="bg"></div>
+    <form action="filter-view.html" method="GET">
+      <div class="container intro-form">
 
-  <form action="filter-view.html" method="GET">
-    <div class="container intro-form">
-
-      <div class="row mb-3 justify-content-center">
-        <div class="col-10 px-0">
-          <div class="btn-group btn-group-toggle d-flex align-items-stretch" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" value="car" name="vehicle" id="option1" autocomplete="off" checked> <i class="fas fa-car fa-2x"></i>
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" value="moto" name="vehicle" id="option3" autocomplete="off"> <i class="fas fa-motorcycle fa-2x"></i>
-            </label>
+        <div class="row mb-3 justify-content-center">
+          <div class="col-10 px-0">
+            <div class="btn-group btn-group-toggle d-flex align-items-stretch" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" value="car" name="vehicle" id="option1" autocomplete="off" checked> <i class="fas fa-car fa-2x"></i>
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" value="moto" name="vehicle" id="option3" autocomplete="off"> <i class="fas fa-motorcycle fa-2x"></i>
+              </label>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mb-3 justify-content-center">
-        <input class="form-control col-10" type="text" placeholder="Las Palmas de Gran Canaria" readonly>
-      </div>
+        <div class="row mb-3 justify-content-center">
+          <input class="form-control col-10" type="text" placeholder="Las Palmas de Gran Canaria" readonly>
+        </div>
 
-      <div class="mb-3 row justify-content-center">
-        <!--<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>-->
-        <select name="service" class="custom-select col-10" id="inlineFormCustomSelect">
-            <option value="mechanic">Mecánica</option>
-            <option value="bp">Chapa y Pintura</option>
-            <option value="electricity">Electricidad</option>
-        </select>
-      </div>
+        <div class="mb-3 row justify-content-center">
+          <!--<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>-->
+          <select name="service" class="custom-select col-10" id="inlineFormCustomSelect">
+              <option value="mechanic">Mecánica</option>
+              <option value="bp">Chapa y Pintura</option>
+              <option value="electricity">Electricidad</option>
+          </select>
+        </div>
 
-      <div class="row justify-content-center mt-5">
-        <input type="submit" class="btn theme-gray-dark-btn col-10" value="Buscar">
-      </div>
+        <div class="row justify-content-center mt-5">
+          <input type="submit" class="btn theme-gray-dark-btn col-10" value="Buscar">
+        </div>
 
-    </div>
-  </form>
+      </div>
+    </form>
+  </div>
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
